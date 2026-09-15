@@ -70,7 +70,7 @@
   margin: 0 0 0.7em;
   color: var(--global-link-color);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .research-project-card__summary {
@@ -99,7 +99,7 @@
   }
 
   span {
-    color: var(--global-text-color-light);
+    color: mix(#fff, $gray, 4%); //var(--global-text-color);
   }
 }
 
@@ -115,7 +115,7 @@
     min-height: 2.25em;
     padding: 0.35em 0.8em;
     border: 1px solid var(--global-link-color);
-    border-radius: 999px;
+    border-radius: 3px;
     color: var(--global-link-color);
     font-size: 0.9rem;
     font-weight: 700;
@@ -140,9 +140,9 @@
   li {
     margin: 0;
     padding: 0.25em 0.65em;
-    border-radius: 999px;
+    border-radius: 3px;
     background: var(--global-code-background-color);
-    color: var(--global-text-color-light);
+    color: mix(#fff, $gray, 4%);// var(--global-text-color-light);
     font-size: 0.85rem;
     line-height: 1.4;
   }

@@ -10,7 +10,7 @@ redirect_from:
 
 I am a medical AI researcher working at the intersection of **multimodal learning, foundation models, and medical image analysis**. My research focuses on building clinically meaningful AI systems that can learn across institutions, imaging modalities, and downstream tasks.
 
-<a href="{{ site.author.cv | default: '/files/SuminJung_CV.pdf' | relative_url }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)</a>
+<!-- <a href="{{ site.author.cv | default: '/files/SuminJung_CV.pdf' | relative_url }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)</a> -->
 
 I received my M.S. in Computer Engineering from **Korea University**, where I worked with Prof. Jin Tae Kwak on deep learning for acute ischemic stroke imaging, after earning a B.S. in Computer Science from **Dongduk Women's University**. My graduate research led to **3D-MoReT**, a lightweight 3D CNN–Transformer model that generates multiphase collateral maps from 4D MR perfusion imaging.
 
