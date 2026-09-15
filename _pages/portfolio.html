@@ -1,0 +1,62 @@
+---
+layout: archive
+title: "Research Projects"
+permalink: /portfolio/
+author_profile: true
+---
+
+<p class="research-projects__intro">
+  Selected work in medical image analysis, multimodal learning, and translational clinical AI. Each project highlights my role, technical scope, and key outcome.
+</p>
+
+<div class="research-projects" aria-label="Research projects">
+{% assign sorted_projects = site.portfolio | sort: "date" | reverse %}
+{% capture written_year %}'None'{% endcapture %}
+{% for project in sorted_projects %}
+  {% capture project_year %}{{ project.date | date: "%Y" }}{% endcapture %}
+  {% if project_year != written_year %}
+    <h2 id="projects-{{ project_year }}" class="research-projects__year">{{ project_year }}</h2>
+    {% capture written_year %}{{ project_year }}{% endcapture %}
+  {% endif %}
+
+  <article class="research-project-card">
+    <div class="research-project-card__meta">
+      {% if project.venue %}<span>{{ project.venue }}</span>{% endif %}
+      {% if project.period %}<span>{{ project.period }}</span>{% endif %}
+    </div>
+
+    <h3 class="research-project-card__title">
+      <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+    </h3>
+
+    {% if project.role %}<p class="research-project-card__role">{{ project.role }}</p>{% endif %}
+    <p class="research-project-card__summary">{{ project.summary }}</p>
+
+    {% if project.highlight %}
+      <p class="research-project-card__highlight">
+        <strong>Key outcome</strong>
+        <span>{{ project.highlight }}</span>
+      </p>
+    {% endif %}
+
+    {% if project.links %}
+      <div class="research-project-card__links" aria-label="Project links">
+        {% for item in project.links %}
+          <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.label }}</a>
+        {% endfor %}
+        <a href="{{ project.url | relative_url }}">Project details</a>
+      </div>
+    {% else %}
+      <div class="research-project-card__links">
+        <a href="{{ project.url | relative_url }}">Project details</a>
+      </div>
+    {% endif %}
+
+    {% if project.technologies %}
+      <ul class="research-project-card__tags" aria-label="Methods and technologies">
+        {% for technology in project.technologies %}<li>{{ technology }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+  </article>
+{% endfor %}
+</div>
