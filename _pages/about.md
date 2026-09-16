@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a medical AI researcher working at the intersection of **multimodal learning, foundation models, and medical image analysis**. My research focuses on building clinically meaningful AI systems that can learn across institutions, imaging modalities, and downstream tasks.
+I am a medical AI researcher working at the intersection of **multimodal learning, foundation models, and medical image analysis**. My research focuses on building clinically meaningful AI systems that can learn across institutions, imaging modalities, and downstream tasks. I am actively pursuing Ph.D. opportunities that align with my research interests.
 
 <!-- <a href="{{ site.author.cv | default: '/files/SuminJung_CV.pdf' | relative_url }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)</a> -->
 
