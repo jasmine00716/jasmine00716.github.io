@@ -36,4 +36,4 @@ Selected Highlights
 Explore My Work
 ======
 
-[Publications](/publications/) · [Projects](/files/) · [CV](/cv/) · [News](/year-archive/)
+[Publications](/publications/) · [Projects](/portfolio/) · [CV](/cv/) · [News](/year-archive/)
