@@ -7,7 +7,7 @@ event_type: "Presentation"
 image_alt: "Architecture of the 3D Mobile Regression Vision Transformer"
 thumbnail_fit: "contain"
 header:
-  teaser: /images/timeline/3d-moret-presentation.png
+  teaser: /images/timeline/3d-moret-pt.png
 ---
 
 My first-author paper, “3D Mobile Regression Vision Transformer for Collateral Imaging in Acute Ischemic Stroke,” was published in the *International Journal of Computer Assisted Radiology and Surgery* in July 2024.
