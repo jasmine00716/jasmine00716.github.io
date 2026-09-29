@@ -27,11 +27,11 @@ What I find most useful is the compromise. Swin does not frame locality as somet
 
 ## Medical imaging perspective
 
-The architecture maps naturally to 3D medical images: patches can become volumes, windows can operate locally in three dimensions, and hierarchical features can support encoder–decoder segmentation models. Local attention is particularly important because a CT or MR volume can generate far more tokens than a 2D natural image.
+The same design can be extended to 3D medical images: patches and windows can operate in three dimensions, while hierarchical features can support encoder–decoder segmentation models. Local attention is particularly useful because a CT or MR volume can generate far more tokens than a 2D natural image.
 
-However, windowing also introduces choices that should not be treated as implementation details. A lesion or vascular structure may cross a window boundary. Anisotropic voxel spacing means that a cubic window in index space may not represent a cubic region anatomically. Patch size, window size, and downsampling schedule should therefore reflect both the target anatomy and the acquisition protocol.
+However, windowing also introduces choices that should not be treated as implementation details. A lesion or vascular structure may cross a window boundary. With anisotropic voxel spacing, a cubic window in voxel coordinates may not cover a cubic region in physical space. Patch size, window size, and downsampling schedule should therefore reflect both the target anatomy and the acquisition protocol.
 
-Swin also does not make attention globally cheap in a single step. Long-range interaction emerges across successive shifted-window blocks. Whether that is sufficient depends on the depth of the network and the spatial relationships required by the task.
+Information still needs multiple blocks to travel over long distances; shifted windows do not provide global attention in one step. Whether that is sufficient depends on the depth of the network and the spatial relationships required by the task.
 
 ## Takeaway
 

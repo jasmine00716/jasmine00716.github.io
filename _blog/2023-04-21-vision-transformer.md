@@ -2,7 +2,7 @@
 title: "Vision Transformer: What Changes When Images Become Token Sequences?"
 date: 2023-04-21
 permalink: /blog/vision-transformer/
-excerpt: "A reading note on ViT, its deliberately minimal architecture, and the trade-off between global modeling and data efficiency in medical imaging."
+excerpt: "A reading note on ViT's simple architecture and the trade-offs among global context, data scale, and medical-image detail."
 tags:
   - Vision Transformer
   - Computer Vision
@@ -17,7 +17,7 @@ tags:
 
 The most striking part of the Vision Transformer (ViT) is not a complicated new attention mechanism. It is the decision to treat an image as a sequence with as few vision-specific assumptions as possible. The image is divided into fixed-size patches, each patch is projected into an embedding, positional information is added, and the resulting sequence is processed by a standard Transformer encoder. A learnable class token collects the representation used for classification.
 
-This formulation replaces the locality and translation-equivariance built into convolution with learned relationships among patches. With sufficiently large-scale pre-training, the model can discover useful visual structure rather than having that structure prescribed by the architecture.
+This formulation relies less on the built-in locality of convolution and more on relationships learned among patches. With large-scale pre-training, those relationships can form transferable visual representations.
 
 ## Why it mattered
 
@@ -27,7 +27,7 @@ The result comes with an important qualification. ViT becomes especially competi
 
 ## Medical imaging perspective
 
-Global context is attractive in medical imaging. A local abnormality may need to be interpreted relative to the contralateral anatomy, the surrounding vascular territory, or a pattern distributed across multiple regions. Attention offers a direct mechanism for relating distant patches.
+Global context is attractive in medical imaging. A local abnormality may need to be interpreted relative to the opposite hemisphere, the surrounding vascular territory, or a pattern distributed across multiple regions. Attention offers a direct mechanism for relating distant patches.
 
 At the same time, medical datasets are usually much smaller than natural-image pre-training corpora. Image resolution can be high, and volumetric data makes the token count grow quickly. Converting a 3D scan into small tokens may preserve detail but make global attention prohibitively expensive; using large tokens reduces the cost but risks losing small lesions and fine boundaries.
 

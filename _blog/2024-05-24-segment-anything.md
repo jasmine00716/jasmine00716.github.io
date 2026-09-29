@@ -23,7 +23,7 @@ The model is paired with SA-1B, a dataset containing more than one billion masks
 
 SAM changes the expected interface to a segmentation system. Instead of training a separate model for every label set, a user specifies the target at inference time. This makes segmentation useful as an interactive tool and as an annotation accelerator, even when the desired object category was not explicitly defined during training.
 
-The paper also shows that foundation-model behavior can emerge in a dense prediction task. The model is not only recognizing an image; it is turning a human prompt into a spatial output.
+The promptable design also changes how generalization is tested: a target can be specified at inference time rather than being limited to categories fixed during training.
 
 ## Medical imaging perspective
 
@@ -31,8 +31,8 @@ The interaction model is attractive for clinical annotation. A radiologist could
 
 However, “anything” should be interpreted cautiously in medicine. SAM was trained primarily on natural images, while medical images differ in intensity distribution, texture, resolution, and semantics. Many clinical targets have weak boundaries, low contrast, or no natural-object equivalent. A bounding box around a lesion can also provide substantial prior information, so box-prompt performance should not be confused with fully automatic detection and segmentation.
 
-Most medical studies are volumetric, whereas the original SAM operates on 2D images. Processing slices independently may produce discontinuous masks and ignore voxel spacing. Clinical use also requires calibrated uncertainty, reproducibility, failure detection, and validation across sites—properties that impressive visual examples do not establish on their own.
+Many CT and MR studies are volumetric, whereas the original SAM operates on 2D images. Processing slices independently may produce discontinuous masks and ignore voxel spacing. Clinical use also calls for uncertainty estimates, reproducibility, failure detection, and validation across sites—properties that impressive visual examples do not establish on their own.
 
 ## Takeaway
 
-SAM is most convincing to me as a general segmentation interface rather than an autonomous clinical model. Its promptable design can support annotation and human-in-the-loop workflows, but medical deployment requires domain-specific adaptation and evaluation. The important question is not whether SAM can produce a plausible mask; it is whether the system can reliably reduce work without hiding clinically meaningful errors.
+SAM is most convincing to me as an interactive segmentation interface. Its promptable design can support annotation and clinician-guided workflows, while medical deployment requires domain-specific adaptation and evaluation. The practical test is whether it reduces work while allowing users to catch clinically meaningful errors.

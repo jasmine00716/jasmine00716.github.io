@@ -1,5 +1,5 @@
 ---
-title: "Masked Autoencoders: Why Reconstructing Less Can Teach More"
+title: "Masked Autoencoders: Why Seeing Less Can Teach More"
 date: 2023-11-17
 permalink: /blog/masked-autoencoders/
 excerpt: "A closer look at MAE's asymmetric design, high masking ratio, and potential for learning from unlabeled medical images."
@@ -17,7 +17,7 @@ tags:
 
 Masked Autoencoders (MAE) learn visual representations by hiding a large fraction of image patches and reconstructing the missing pixels. Two design choices make the method especially effective. First, the encoder processes only visible patches; mask tokens are introduced later in a lightweight decoder. Second, the masking ratio is unusually high—75% in the main setting.
 
-The asymmetric encoder–decoder is computationally important. Because the expensive encoder sees only a quarter of the patches during pre-training, large models can be trained more efficiently. The high masking ratio also prevents reconstruction from becoming a trivial interpolation problem. The model must use broader context to infer what is missing.
+The asymmetric encoder–decoder is computationally important. Because the expensive encoder sees only a quarter of the patches during pre-training, large models can be trained more efficiently. The high masking ratio also makes trivial interpolation less likely. The model must use broader context to infer what is missing.
 
 ## Why it mattered
 
@@ -35,4 +35,4 @@ Masking strategy may therefore matter as much as masking ratio. Random independe
 
 ## Takeaway
 
-MAE makes self-supervised learning appealing through a rare combination of simplicity and scale. Its central lesson for medical AI is not merely to reconstruct masked scans. It is to design a missing-information task that forces the model to learn the anatomical and pathological structure needed downstream.
+MAE makes self-supervised learning appealing through a combination of simplicity and efficient scaling. For medical AI, the key design question is what to hide and what to predict so that pre-training rewards features useful for downstream anatomy and pathology tasks.

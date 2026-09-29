@@ -17,13 +17,13 @@ tags:
 
 Swin UNETR combines a hierarchical 3D Swin Transformer encoder with a U-shaped segmentation architecture. The encoder extracts representations at multiple resolutions, while skip connections deliver those features to a convolutional decoder that reconstructs a dense segmentation map.
 
-The paper places equal emphasis on self-supervised pre-training. The model is pre-trained on 5,050 publicly available CT volumes using masked volume inpainting, contrastive learning, and rotation prediction. It is then fine-tuned for multi-organ and Medical Segmentation Decathlon tasks.
+The paper places equal emphasis on self-supervised pre-training. The encoder is pre-trained on CT scans from five public datasets encompassing 5,050 subjects, using masked volume inpainting, contrastive learning, and rotation prediction. It is then fine-tuned for the BTCV multi-organ benchmark and Medical Segmentation Decathlon tasks.
 
 ## Why it mattered
 
 This work connects several ideas that are individually attractive for medical imaging: windowed attention for tractable 3D computation, hierarchical features for dense prediction, and pre-training that does not require manual segmentation labels. It also demonstrates that a Transformer need not replace every convolutional component. The Swin encoder and convolutional decoder serve different purposes within the same model.
 
-The tailored proxy tasks are also notable. Rather than transferring a 2D natural-image representation directly, the model learns from 3D medical volumes and must capture spatial context across slices.
+The pre-training tasks are also notable. Rather than transferring a 2D natural-image representation directly, the model learns from 3D medical volumes and must capture spatial context across slices.
 
 ## Medical imaging perspective
 
