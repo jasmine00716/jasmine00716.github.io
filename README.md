@@ -12,6 +12,7 @@ Visit the live site at **[jasmine00716.github.io](https://jasmine00716.github.io
 - **[About](https://jasmine00716.github.io/):** research interests, education, industry experience, and selected highlights
 - **[Publications](https://jasmine00716.github.io/publications/):** journal articles, conference papers and preprints, presentations, and patents
 - **[Research Projects](https://jasmine00716.github.io/portfolio/):** 3D-MoReT, clinical collateral-imaging software, ISLES 2024, PathRadX, and stroke-segmentation research
+- **[Blog](https://jasmine00716.github.io/blog/):** paper reviews and notes on medical AI, foundation models, and research in progress
 - **[CV](https://jasmine00716.github.io/cv/):** education, experience, publications, awards, and technical skills
 - **[News](https://jasmine00716.github.io/year-archive/):** academic and professional milestones in chronological order
 
@@ -30,6 +31,7 @@ Visit the live site at **[jasmine00716.github.io](https://jasmine00716.github.io
 | `_pages/` | Main pages, including About, Publications, Projects, CV, and News |
 | `_publications/` | Individual publication, presentation, preprint, and patent entries |
 | `_portfolio/` | Research project descriptions |
+| `_blog/` | Paper reviews and research notes |
 | `_posts/` | Dated academic and professional milestones |
 | `files/` | Downloadable documents, including `SuminJung_CV.pdf` |
 | `images/` | Profile, project, timeline, and site icon assets |
@@ -70,6 +72,7 @@ The preview will be available at [http://localhost:4000](http://localhost:4000).
 
 - Add or edit publication records in `_publications/`.
 - Add research projects in `_portfolio/`.
+- Add paper reviews and research notes in `_blog/`.
 - Add milestones in `_posts/` using `YYYY-MM-DD-title.md` filenames.
 - Update the web CV in `_pages/cv.md` and replace `files/SuminJung_CV.pdf` when the PDF changes.
 - Update personal links and global metadata in `_config.yml`.
