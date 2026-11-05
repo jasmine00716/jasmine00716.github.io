@@ -93,7 +93,7 @@ Honors & Awards
 
 - **Best Poster Award**, 38th Annual Conference of the Korean Society of Medical Imaging Informatics, 2024
 - **9th Place**, Ischemic Stroke Lesion Segmentation Challenge (ISLES 2024), 2024
-- **Honorable Mention**, Samsung AI Challenge, Image Quality Assessment, 2023
+- **3rd Prize**, Samsung AI Challenge, Image Quality Assessment, 2023 (KRW 3,000,000 team prize)
 - **Gold Prize**, Joint Capstone Design Competition, 2022
 
 Patent
